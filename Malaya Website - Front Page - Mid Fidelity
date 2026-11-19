@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Malaya - Homepage</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+         HEADER
+    =========================== -->
+
+    <header>
+
+        <!-- Announcement Bar -->
+        <div class="announcement-bar">
+            <p><strong>FREE SHIPPING</strong> for every ₱1,000 purchase!</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+
+            <a href="#" class="logo">MALAYA</a>
+
+            <nav class="nav-menu">
+                <a href="file:///C:/Users/Administrator/Desktop/MMS%20171%20TEXT/Mid%20Fidelity%20Wireframe/sample1.html#" class="active">HOME</a>
+                <a href="file:///C:/Users/Administrator/Desktop/MMS%20171%20TEXT/Mid%20Fidelity%20Wireframe/shop.html">SHOP</a>
+                <a href="#">ABOUT</a>
+                <a href="file:///C:/Users/Administrator/Desktop/MMS%20171%20TEXT/Mid%20Fidelity%20Wireframe/contactus.html#">CONTACT</a>
+            </nav>
+
+            <div class="nav-icons">
+                <a href="#" aria-label="Search">SEARCH</a>
+                <a href="#" aria-label="Account">ACCOUNT</a>
+                <a href="#" aria-label="Shopping cart">CART</a>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <details class="mobile-menu">
+                <summary>MENU ☰</summary>
+
+                <nav>
+                    <a href="#">HOME</a>
+                    <a href="#">SHOP</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">CONTACT</a>
+                </nav>
+            </details>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================
+         HERO BANNER
+    =========================== -->
+
+    <section class="hero-banner">
+
+        <!-- Banner Image Placeholder -->
+        <div class="hero-image-placeholder">
+
+            <div class="hero-text">
+                <h1>TAGLINE</h1>
+            </div>
+
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+
+    <!-- ==========================
+         SHOP NOW / FEATURED PRODUCTS
+    =========================== -->
+
+    <section class="shop-section">
+
+        <!-- Section Heading -->
+        <div class="shop-heading">
+            <h2>SHOP NOW</h2>
+            <a href="#">view more →</a>
+        </div>
+
+        <!-- Product Container -->
+        <div class="product-container">
+
+            <!-- Product Card 1 -->
+            <div class="product-card">
+
+                <div class="product-image-placeholder">
+                    <div class="placeholder-image"></div>
+                </div>
+
+                <div class="product-details">
+                    <p class="product-color">○</p>
+                    <p class="product-category">Unisex, XS - 3XL</p>
+                    <h3>Product Name One</h3>
+                    <p class="product-price">₱ 499.00</p>
+
+                    <div class="product-info">
+                        <span>★ 4.8 (155)</span>
+                        <span>In-stock</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+
+                <div class="product-image-placeholder">
+                    <div class="placeholder-image"></div>
+                </div>
+
+                <div class="product-details">
+                    <p class="product-color">●</p>
+                    <p class="product-category">Unisex, XS - 3XL</p>
+                    <h3>Product Name Two</h3>
+                    <p class="product-price">₱ 499.00</p>
+
+                    <div class="product-info">
+                        <span>★ 5.0 (206)</span>
+                        <span>In-stock</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+
+                <div class="product-image-placeholder">
+                    <div class="placeholder-image"></div>
+                </div>
+
+                <div class="product-details">
+                    <p class="product-color">●</p>
+                    <p class="product-category">Unisex, XS - 3XL</p>
+                    <h3>Product Name Three</h3>
+                    <p class="product-price">₱ 499.00</p>
+
+                    <div class="product-info">
+                        <span>★ 4.9 (182)</span>
+                        <span>In-stock</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================
+         ABOUT US SECTION
+    =========================== -->
+
+    <section class="about-section">
+
+        <!-- About Image -->
+        <div class="about-image-placeholder">
+            <div class="placeholder-image"></div>
+        </div>
+
+        <!-- About Text -->
+        <div class="about-content">
+
+            <h2>ABOUT US</h2>
+
+            <div class="about-text-placeholder">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <a href="#" class="about-link">learn more →</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================
+         NEWSLETTER SECTION
+    =========================== -->
+
+    <section class="newsletter-section">
+
+        <div class="newsletter-text">
+            <h3>JOIN OUR NEWSLETTER</h3>
+            <p>
+                Be the FIRST to receive the latest news,
+                exclusive deals and discounts!
+            </p>
+        </div>
+
+        <form class="newsletter-form">
+
+            <div class="newsletter-input-group">
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    aria-label="Email address"
+                >
+
+                <button type="submit">SUBSCRIBE</button>
+            </div>
+
+            <p class="newsletter-note">
+                No spam, we hate it as much as you do.
+            </p>
+
+        </form>
+
+    </section>
+
+
+    <!-- ==========================
+         FOOTER
+    =========================== -->
+
+    <footer class="footer">
+
+        <!-- Social Media -->
+        <div class="footer-social">
+
+            <h3>FOLLOW US ON</h3>
+
+            <div class="social-links">
+                <a href="#">F</a>
+                <a href="#">IG</a>
+                <a href="#">YT</a>
+            </div>
+
+        </div>
+
+
+        <!-- Footer Navigation -->
+        <div class="footer-links">
+
+            <!-- About Links -->
+            <div class="footer-column">
+                <h3>ABOUT</h3>
+
+                <a href="#">About Us</a>
+                <a href="#">Return & Exchange</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+
+
+            <!-- Help Links -->
+            <div class="footer-column">
+                <h3>HELP</h3>
+
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Track Order</a>
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>© 2026 Malaya by the Byte of 87.</p>
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
