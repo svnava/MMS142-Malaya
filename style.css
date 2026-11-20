@@ -1,0 +1,904 @@
+/* =================================
+   BRAND COLORS & GLOBAL VARIABLES
+================================= */
+
+:root {
+    --primary: #552CB7;
+    --secondary: #EA4B8E;
+    --yellow: #FFE962;
+    --white: #FFFFFF;
+    --cream: #FAF5EC;
+    --black: #181818;
+    --newsletter: #FFB3CF;
+}
+
+/* =================================
+   GLOBAL RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Solway', serif;
+    background: var(--cream);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* =================================
+   ACCESSIBILITY / FOCUS INDICATORS
+================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.site-header a:focus-visible {
+    outline-color: var(--white);
+}
+
+/* =================================
+   ANNOUNCEMENT BAR
+================================= */
+
+.announcement {
+    background: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* =================================
+   HEADER / NAVIGATION
+================================= */
+
+.site-header {
+    background: var(--yellow);
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8%;
+    gap: 25px;
+}
+
+/* LOGO */
+
+.logo img {
+    max-height: 75px;
+    max-width: 190px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* NAVIGATION LINKS */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--secondary);
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* CUSTOMER TOOLS */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icons a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 23px;
+    transition: 0.2s ease;
+}
+
+.nav-icons a:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+/* =================================
+   CAROUSEL BANNER
+================================= */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.caption h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.caption p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.caption a {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 3;
+    font-size: 20px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.dots span.active {
+    opacity: 1;
+    background: var(--secondary);
+}
+
+@media(max-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .caption h1 {
+        font-size: 30px;
+    }
+
+    .caption p {
+        font-size: 14px;
+    }
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.hero-content {
+	display: flex;
+	align-items: center;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.btn {
+    display: flex;
+	align-items: center;
+    color: var(--white);
+    font-size: 15px;
+	margin-right: 30px;
+}
+
+.btn:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 55px auto 65px;
+}
+
+/* =================================
+   PAGE TITLE
+================================= */
+
+.page-title {
+    background: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* LAST UPDATED */
+
+.updated {
+    text-align: center;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.updated b {
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* =================================
+   PRODUCTS SECTION
+================================= */
+
+.products-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.products-section p {
+    color: #777;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+	justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.product-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.product-card h3 {
+	color: var(--primary);
+    margin: 15px 0 8px;
+    font-size: 22px;
+	text-align: left;
+}
+
+.product-card p {
+    color: var(--black);
+    font-weight: bold;
+	font-size: 22px;
+	text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =================================
+   ABOUT US
+================================= */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 10%;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-content {
+    flex: 1;
+	background-color: var(--white);
+	padding: 35px;
+    border-radius: 10px;
+    color: white;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.about-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-btn {
+    display: block;
+	text-align: right;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 15px;
+	margin-right: 30px;
+}
+
+.about-btn:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 40px 6%;
+        gap: 25px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+}
+
+/* =================================
+   INTRODUCTION
+================================= */
+
+.introduction {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+/* =================================
+   POLICY CONTENT BOXES
+================================= */
+
+.policy-content {
+    background: var(--cream);
+    color: var(--black);
+    font-family: 'Solway', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    padding: 20px;
+    min-height: 120px;
+    width: 100%;
+    border: 2px solid #E5DCCF;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+/* =================================
+   PRIVACY POLICY GRID
+================================= */
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 40px;
+}
+
+.policy-section {
+    width: 100%;
+}
+
+.policy-section h2 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* =================================
+   NEWSLETTER
+================================= */
+
+.newsletter {
+    background: var(--newsletter);
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Solway', serif;
+}
+
+.newsletter-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    color: var(--black);
+}
+
+.newsletter-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--black);
+}
+
+/* NEWSLETTER FORM */
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 45%;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Solway', serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.newsletter-form input::placeholder {
+    color: #777;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* SUBSCRIBE BUTTON */
+
+.newsletter-form button {
+    background: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 20vh;
+    padding: 12px 25px;
+    font-family: 'Solway', serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background: var(--primary);
+    color: var(--cream);
+    padding: 50px 8% 25px;
+    font-family: 'Solway', serif;
+}
+
+/* FOOTER GRID */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+/* FOOTER SECTION TITLES */
+
+.footer-column h4 {
+    color: var(--cream);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+/* FOOTER LINKS */
+
+.footer-column a {
+    display: block;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--yellow);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.social-icons a:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    color: var(--cream);
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 45px;
+    border-top: 1px solid rgba(250, 245, 236, 0.3);
+    padding-top: 20px;
+}
+
+/* =================================
+   TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 7px;
+    }
+
+    main {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    .page-title {
+        font-size: 40px;
+    }
+
+    .policy-grid {
+        gap: 30px 25px;
+    }
+
+    .policy-section h2 {
+        font-size: 26px;
+    }
+
+    .newsletter {
+        padding: 35px 5%;
+    }
+
+    .newsletter-form {
+        width: 50%;
+    }
+
+    .newsletter-form button {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 600px) {
+
+    .announcement {
+        font-size: 12px;
+    }
+
+    .site-header {
+        justify-content: center;
+        padding: 18px 4%;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+    main {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .page-title {
+        font-size: 28px;
+        padding: 15px 10px;
+    }
+
+    .updated {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .policy-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .policy-section h2 {
+        font-size: 24px;
+    }
+
+    .policy-content {
+        font-size: 15px;
+        min-height: 100px;
+        padding: 15px;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px 7%;
+    }
+
+    .newsletter-content h3 {
+        font-size: 25px;
+    }
+
+    .newsletter-content p {
+        font-size: 14px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .footer-content .footer-column:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-column h4 {
+        font-size: 20px;
+    }
+
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+    nav a {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .policy-section h2 {
+        font-size: 21px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content .footer-column:first-child {
+        grid-column: auto;
+    }
+}
+
+/* =================================
+   END OF CSS
+================================= */
