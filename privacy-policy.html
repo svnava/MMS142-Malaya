@@ -1,1093 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Read Malaya's Privacy Policy to understand how we collect, use, and protect your personal information.">
-
-<title>Malaya | Privacy Policy</title>
-
-<!-- SOLWAY FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-/* =================================
-   BRAND COLORS & GLOBAL VARIABLES
-================================= */
-
-:root {
-    --primary: #552CB7;
-    --secondary: #EA4B8E;
-    --yellow: #FFE962;
-    --white: #FFFFFF;
-    --cream: #FAF5EC;
-    --black: #181818;
-    --newsletter: #FFB3CF;
-}
-
-/* =================================
-   GLOBAL RESET
-================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Solway', serif;
-    background: var(--cream);
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-}
-
-/* =================================
-   ACCESSIBILITY / FOCUS INDICATORS
-================================= */
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-    outline: 3px solid var(--primary);
-    outline-offset: 2px;
-}
-
-/* WHITE OUTLINE ON YELLOW HEADER */
-
-.site-header a:focus-visible {
-    outline-color: var(--white);
-}
-
-/* =================================
-   ANNOUNCEMENT BAR
-================================= */
-
-.announcement {
-    background: var(--secondary);
-    color: var(--white);
-    text-align: center;
-    padding: 9px 15px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* =================================
-   HEADER / NAVIGATION
-================================= */
-
-.site-header {
-    background: var(--yellow);
-    min-height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8%;
-    gap: 25px;
-}
-
-/* LOGO */
-
-.logo {
-    font-size: 30px;
-    font-weight: 800;
-    color: var(--secondary);
-    text-decoration: none;
-    line-height: 1;
-}
-
-/* NAVIGATION LINKS */
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--secondary);
-    font-size: 24px;
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.2s ease;
-}
-
-nav a:hover {
-    background: var(--secondary);
-    color: var(--white);
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-/* CUSTOMER TOOLS */
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-icons a {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--secondary);
-    text-decoration: none;
-    font-size: 23px;
-    transition: 0.2s ease;
-}
-
-.nav-icons a:hover {
-    background: var(--secondary);
-    color: var(--white);
-}
-
-/* =================================
-   MAIN CONTENT
-================================= */
-
-main {
-    max-width: 1200px;
-    width: 90%;
-    margin: 55px auto 65px;
-}
-
-/* =================================
-   PAGE TITLE
-================================= */
-
-.page-title {
-    background: var(--secondary);
-    color: var(--white);
-    text-align: center;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.3;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-}
-
-/* LAST UPDATED */
-
-.updated {
-    text-align: center;
-    color: var(--primary);
-    font-size: 14px;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 35px;
-}
-
-.updated b {
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* =================================
-   INTRODUCTION
-================================= */
-
-.introduction {
-    max-width: 1000px;
-    margin: 0 auto 40px;
-}
-
-/* =================================
-   POLICY CONTENT BOXES
-================================= */
-
-.policy-content {
-    background: var(--cream);
-    color: var(--black);
-    font-family: 'Solway', serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.8;
-    padding: 20px;
-    min-height: 120px;
-    width: 100%;
-    border: 2px solid #E5DCCF;
-    border-radius: 5px;
-    overflow-wrap: break-word;
-}
-
-/* =================================
-   PRIVACY POLICY GRID
-================================= */
-
-.policy-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 35px 40px;
-}
-
-/* POLICY SECTIONS */
-
-.policy-section {
-    width: 100%;
-}
-
-/* SUBSECTION TITLES */
-
-.policy-section h2 {
-    text-align: center;
-    color: var(--secondary);
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-/* FULL WIDTH SECTION */
-
-.full-width {
-    grid-column: 1 / -1;
-}
-
-/* =================================
-   NEWSLETTER
-================================= */
-
-.newsletter {
-    background: var(--newsletter);
-    padding: 40px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    font-family: 'Solway', serif;
-}
-
-.newsletter-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 7px;
-    color: var(--black);
-}
-
-.newsletter-content p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--black);
-}
-
-/* NEWSLETTER FORM */
-
-.newsletter-form {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 45%;
-}
-
-.newsletter-form input {
-    flex: 1;
-    min-width: 0;
-    padding: 13px 16px;
-    border: 2px solid var(--primary);
-    border-radius: 5px;
-    background: var(--white);
-    color: var(--black);
-    font-family: 'Solway', serif;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.newsletter-form input::placeholder {
-    color: #777;
-    font-weight: 300;
-    font-style: italic;
-}
-
-/* SUBSCRIBE BUTTON */
-
-.newsletter-form button {
-    background: var(--primary);
-    color: var(--white);
-    border: 2px solid var(--primary);
-    border-radius: 20vh;
-    padding: 12px 25px;
-    font-family: 'Solway', serif;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.newsletter-form button:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
-}
-
-/* =================================
-   FOOTER
-================================= */
-
-footer {
-    background: var(--primary);
-    color: var(--cream);
-    padding: 50px 8% 25px;
-    font-family: 'Solway', serif;
-}
-
-/* FOOTER GRID */
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
-}
-
-/* FOOTER SECTION TITLES */
-
-.footer-column h4 {
-    color: var(--cream);
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 18px;
-}
-
-/* FOOTER LINKS */
-
-.footer-column a {
-    display: block;
-    text-decoration: none;
-    color: var(--cream);
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 12px;
-    transition: 0.2s ease;
-}
-
-.footer-column a:hover {
-    color: var(--yellow);
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-/* SOCIAL MEDIA ICONS */
-
-.social-icons {
-    display: flex;
-    gap: 12px;
-}
-
-.social-icons a {
-    width: 38px;
-    height: 38px;
-    border: 1px solid var(--cream);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cream);
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-.social-icons a:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
-    color: var(--white);
-}
-
-/* COPYRIGHT */
-
-.copyright {
-    color: var(--cream);
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 45px;
-    border-top: 1px solid rgba(250, 245, 236, 0.3);
-    padding-top: 20px;
-}
-
-/* =================================
-   TABLET RESPONSIVENESS
-================================= */
-
-@media (max-width: 900px) {
-
-    .site-header {
-        padding: 15px 5%;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .logo {
-        font-size: 27px;
-    }
-
-    nav {
-        gap: 5px;
-    }
-
-    nav a {
-        font-size: 18px;
-        padding: 7px;
-    }
-
-    main {
-        width: 92%;
-        margin: 40px auto;
-    }
-
-    .page-title {
-        font-size: 40px;
-    }
-
-    .policy-grid {
-        gap: 30px 25px;
-    }
-
-    .policy-section h2 {
-        font-size: 26px;
-    }
-
-    .newsletter {
-        padding: 35px 5%;
-    }
-
-    .newsletter-form {
-        width: 50%;
-    }
-
-    .newsletter-form button {
-        font-size: 16px;
-        padding: 12px 18px;
-    }
-}
-
-/* =================================
-   MOBILE RESPONSIVENESS
-================================= */
-
-@media (max-width: 600px) {
-
-    .announcement {
-        font-size: 12px;
-    }
-
-    .site-header {
-        justify-content: center;
-        padding: 18px 4%;
-    }
-
-    .logo {
-        width: 100%;
-        text-align: center;
-        font-size: 28px;
-    }
-
-    nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 7px;
-    }
-
-    .nav-icons {
-        display: none;
-    }
-
-    main {
-        width: 90%;
-        margin: 30px auto;
-    }
-
-    .page-title {
-        font-size: 28px;
-        padding: 15px 10px;
-    }
-
-    .updated {
-        font-size: 12px;
-        margin-bottom: 25px;
-    }
-
-    .policy-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .full-width {
-        grid-column: auto;
-    }
-
-    .policy-section h2 {
-        font-size: 24px;
-    }
-
-    .policy-content {
-        font-size: 15px;
-        min-height: 100px;
-        padding: 15px;
-    }
-
-    .newsletter {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 30px 7%;
-    }
-
-    .newsletter-content h3 {
-        font-size: 25px;
-    }
-
-    .newsletter-content p {
-        font-size: 14px;
-    }
-
-    .newsletter-form {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .newsletter-form input {
-        width: 100%;
-    }
-
-    .newsletter-form button {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 20px;
-    }
-
-    .footer-content .footer-column:first-child {
-        grid-column: 1 / -1;
-    }
-
-    .footer-column h4 {
-        font-size: 20px;
-    }
-
-    .footer-column a {
-        font-size: 14px;
-    }
-
-    .copyright {
-        font-size: 12px;
-    }
-}
-
-/* =================================
-   SMALL MOBILE
-================================= */
-
-@media (max-width: 380px) {
-
-    nav a {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .page-title {
-        font-size: 24px;
-    }
-
-    .policy-section h2 {
-        font-size: 21px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content .footer-column:first-child {
-        grid-column: auto;
-    }
-}
-
-/* =================================
-   END OF CSS
-================================= */
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaya</title>
+
+    <!--Connects the Bootstrap 6 CSS via CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+   
+    <!--Connects the Solway font from Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!--Connects the website's own CSS file-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Connects the mailto.js file for Order Form & Contact Form-->
+    <script src="js/mailto.js" defer></script>
 </head>
-
 <body>
+    <!--Announcement Bar-->
+    <div class="announcement py-2 px-3">
+        FREE SHIPPING for every ₱1,000 purchase!
+    </div>
 
-<!-- =================================
-     ANNOUNCEMENT BAR
-================================= -->
+    <!--Logo + Navigation Bar, for desktop & mobile-->
+    <nav class="navbar md:navbar-expand">
+        <div class="container justify-content-start gap-3">
+            <!--Inserts logo png-->
+            <img src="img/logo-pink.png" alt="Malaya" height="100px">
 
-<div class="announcement">
-    FREE SHIPPING ON EVERY ₱1,500 PURCHASE!
-</div>
+            <!--Inserts the navigation bar in a row for desktop sizes but appears as a hamburger icon toggle for mobile-->
+            <button class="btn-icon navbar-toggler" type="button"
+                    data-bs-toggle="drawer" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
 
+            <dialog class="drawer drawer-start" tabindex="-1" id="mainNav" aria-label="Menu">
+                <div class="drawer-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
 
-<!-- =================================
-     HEADER / NAVIGATION
-================================= -->
-
-<header class="site-header">
-
-    <!-- LOGO -->
-
-    <a href="#" class="logo" aria-label="Malaya Home">
-        malaya
-    </a>
-
-    <!-- NAVIGATION MENU -->
-
-    <nav aria-label="Main navigation">
-        <a href="#">HOME</a>
-        <a href="#">SHOP</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
+                <div class="drawer-body">
+                    <ul class="nav navbar-nav align-items-md-center md:ms-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Home Page">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#shop" aria-label="Shop Page">SHOP</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about" aria-label="About Page">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" aria-label="Contact Page">CONTACT</a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
     </nav>
 
-    <!-- CUSTOMER TOOLS -->
+    <!--Section Content-->
+    <main class="container policy-container py-5 text-center">
+        
+        <!--Page/Section Title: PRIVACY POLICY + Last Updated-->
+        <header class="mb-2">
+            <div class="px-4 pt-4 pb-2 text-break">
+                <h2>MALAYA PRIVACY POLICY</h1>
+                <p><span class="fw-bold">LAST UPDATED:</span> November 22, 2026</p>
+                
+                <!--Introduction-->
+                <p>
+                    Welcome to MALAYA!<br>
+                    Your privacy is important to us.
+                </p>
+                <p class="mb-0">
+                    This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our website, make purchases, or interact with our services.
+                </p>
+            </div>
+        </header>
 
-    <div class="nav-icons">
-
-        <a href="#" aria-label="Search">
-            ⌕
-        </a>
-
-        <a href="#" aria-label="My account">
-            ♙
-        </a>
-
-        <a href="#" aria-label="Shopping cart">
-            🛒
-        </a>
-
-    </div>
-
-</header>
-
-
-<!-- =================================
-     MAIN PRIVACY POLICY
-================================= -->
-
-<main>
-
-    <!-- PAGE TITLE -->
-
-    <h1 class="page-title">
-        MALAYA PRIVACY POLICY
-    </h1>
-
-    <!-- LAST UPDATED -->
-
-    <p class="updated">
-        <b>LAST UPDATED:</b> October 17, 2026
-    </p>
-
-
-    <!-- =================================
-         INTRODUCTION
-    ================================= -->
-
-    <section class="introduction">
-
-        <div class="policy-content">
-
-            <!-- EDIT HERE:
-                 Replace the paragraph below with your
-                 own privacy policy introduction.
-            -->
-
-            Welcome to Malaya! Your privacy is important to us. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our website, make purchases, or interact with our services.
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================
-         PRIVACY POLICY GRID
-    ================================= -->
-
-    <div class="policy-grid">
-
-
-        <!-- SECTION 1 -->
-
-        <section class="policy-section">
-
-            <h2>INFORMATION WE COLLECT OR PROCESS</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own information collection policy.
-                -->
-
+        <!--Section 1: INFORMATION WE COLLECT OR PROCESS-->
+        <section class="px-4 py-2 text-break">
+            <h3>INFORMATION WE COLLECT OR PROCESS</h3>
+            <p>
                 We may collect personal information such as your name, email address, phone number, billing address, shipping address, and other information you provide when using our website.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- SECTION 2 -->
-
-        <section class="policy-section">
-
-            <h2>HOW WE USE YOUR INFORMATION</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own information usage policy.
-                -->
-
+        <!--Section 2: HOW WE USE YOUR INFORMATION-->
+        <section class="px-4 py-2 text-break">
+            <h3>HOW WE USE YOUR INFORMATION</h3>
+            <p>
                 We use the information collected to process orders, provide customer support, improve our services, communicate with customers, and provide updates about our products.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- SECTION 3 -->
-
-        <section class="policy-section">
-
-            <h2>COOKIES AND OTHER TRACKING TECHNOLOGIES</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own cookies and tracking policy.
-                -->
-
+        <!--Section 3: COOKIES AND OTHER TRACKING TECHNOLOGIES-->
+        <section class="px-4 py-2 text-break">
+            <h3>COOKIES AND OTHER TRACKING TECHNOLOGIES</h3>
+            <p>
                 Our website may use cookies and similar technologies to improve your browsing experience, remember your preferences, and understand how visitors interact with our website.
-
-            </div>
-
+            </p>
         </section>
 
-        <!-- =================================
-             SECTION 4
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>INFORMATION SHARING &amp; DISCLOSURE</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own information sharing policy.
-                -->
-
+        <!--Section 4: INFORMATION SHARING & DISCLOSURE-->
+        <section class="px-4 py-2 text-break">
+            <h3>INFORMATION SHARING &amp; DISCLOSURE</h3>
+            <p>
                 We may share necessary information with trusted service providers who help us operate our website, process payments, deliver orders, and provide customer support.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- =================================
-             SECTION 5
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>DATA SECURITY &amp; RETENTION</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own data security and retention policy.
-                -->
-
+        <!--Section 5: DATA SECURITY & RETENTION-->
+        <section class="px-4 py-2 text-break">
+            <h3>DATA SECURITY &amp; RETENTION</h3>
+            <p>
                 We take reasonable measures to protect personal information from unauthorized access, disclosure, alteration, or destruction. We retain information only as necessary for applicable purposes.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- =================================
-             SECTION 6
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>YOUR DATA RIGHTS AND CHOICES</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own customer data rights policy.
-                -->
-
+        <!--Section 6: YOUR DATA RIGHTS AND CHOICES-->
+        <section class="px-4 py-2 text-break">
+            <h3>YOUR DATA RIGHTS AND CHOICES</h3>
+            <p>
                 You may contact us to request access to, correction of, or deletion of your personal information, subject to applicable laws and requirements.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- =================================
-             SECTION 7
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>INTERNATIONAL TRANSFERS</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own international data transfer policy.
-                -->
-
+        <!--Section 7: INTERNATIONAL TRANSFERS-->
+        <section class="px-4 py-2 text-break">
+            <h3>INTERNATIONAL TRANSFERS</h3>
+            <p>
                 Your information may be processed or stored in locations outside your country, depending on the service providers and systems used to operate our website.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- =================================
-             SECTION 8
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>CHILDREN'S DATA &amp; PRIVACY</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own children's privacy policy.
-                -->
-
+        <!--Section 8: CHILDREN'S DATA & PRIVACY-->
+        <section class="px-4 py-2 text-break">
+            <h3>CHILDREN'S DATA &amp; PRIVACY</h3>
+            <p>
                 Our website is not intended to knowingly collect personal information from children without the appropriate consent required by applicable law.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- =================================
-             SECTION 9
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>CHANGES TO THIS PRIVACY POLICY</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     own privacy policy update information.
-                -->
-
+        <!--Section 9: CHANGES TO THIS PRIVACY POLICY-->
+        <section class="px-4 py-2 text-break">
+            <h3>CHANGES TO THIS PRIVACY POLICY</h3>
+            <p>
                 We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
-
-            </div>
-
+            </p>
         </section>
 
-
-        <!-- =================================
-             SECTION 10
-        ================================= -->
-
-        <section class="policy-section">
-
-            <h2>QUESTIONS OR CONCERNS? CONTACT US</h2>
-
-            <div class="policy-content">
-
-                <!-- EDIT HERE:
-                     Replace this paragraph with your
-                     actual customer support contact information.
-                -->
-
-                If you have questions, concerns, or requests regarding this Privacy Policy, please contact our customer support team through our Contact Us page.
-
-            </div>
-
+        <!--Section 10: QUESTIONS OR CONCERNS?-->
+        <section class="px-4 py-2 text-break">
+            <h3>QUESTIONS OR CONCERNS?</h3>
+            <p>
+                If you have questions, concerns, or requests regarding this Privacy Policy, please contact our customer support team through our 
+                <a href="contact.html">Contact Us</a> page.
+            </p>
         </section>
+    </main>
 
+        <!--Row 3: NEWSLETTER Section-->
+        <div class="w-100 py-4 py-md-5" id="newsletter-box">
+            <div class="container">
+                <form class="row g-4 mb-0 align-items-center justify-content-center" id="newsletter">
+                    
+                    <!--1st Column: Section Title + Caption-->
+                    <div class="md:col-6 d-flex flex-column align-items-center">
+                        <div class="text-center md:text-start">
+                            <h4 class="fw-bold mb-0">JOIN OUR NEWSLETTER</h4>
+                            <p class="mb-0">
+                                Be the FIRST to receive the latest news, exclusive deals and discounts!
+                            </p>
+                        </div>
+                    </div>
+            
+                    <!--2nd Column: Email Address Text Field + SUBSCRIBE Button + Hint-->
+                    <div class="md:col-6 d-flex flex-column align-items-center">
+                        <div class="w-100 text-center md:text-start">
+                            <div class="d-flex gap-2">
+                                <input type="email" class="form-control" id="newsEmail" placeholder="Email Address" aria-label="Enter your email address" aria-describedby="newsHelp" required>
+                                <button class="btn btn-primary text-nowrap" type="submit">SUBSCRIBE</button>
+                            </div>
+                            <div id="newsHelp" class="form-text mt-1 mb-0">
+                                No spam, we hate it as much as you do.
+                            </div>
+                        </div>
+                    </div>
 
-    </div>
-
-</main>
-
-
-<!-- =================================
-     NEWSLETTER
-================================= -->
-
-<section class="newsletter">
-
-    <!-- NEWSLETTER TEXT -->
-
-    <div class="newsletter-content">
-
-        <h3>JOIN OUR NEWSLETTER</h3>
-
-        <p>
-            Be the FIRST to receive the latest,
-            exclusive deals and product launches!
-        </p>
-
-    </div>
-
-
-    <!-- NEWSLETTER FORM -->
-
-    <form class="newsletter-form">
-
-        <input
-            type="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            required
-        >
-
-        <button type="submit">
-            SUBSCRIBE
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =================================
-     FOOTER
-================================= -->
-
-<footer>
-
-    <div class="footer-content">
-
-
-        <!-- SOCIAL MEDIA -->
-
-        <div class="footer-column">
-
-            <h4>FOLLOW US ON</h4>
-
-            <div class="social-icons">
-
-                <!-- EDIT HERE:
-                     Replace # with your actual social media URLs.
-                -->
-
-                <a href="#"
-                   aria-label="Facebook">
-                    f
-                </a>
-
-                <a href="#"
-                   aria-label="Instagram">
-                    ◎
-                </a>
-
-                <a href="#"
-                   aria-label="TikTok">
-                    ♪
-                </a>
-
+                </form>
             </div>
-
         </div>
 
+    <!--Footer Section-->
+    <footer class="py-7 mt-auto">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
 
-        <!-- ABOUT -->
+                <!--Column 1: Social Media + Copyright-->
+                <div class="md:col-4 d-flex flex-column align-items-center">
+                    <div class="text-center md:text-start d-flex flex-column h-100">
+                        <h4 class="fw-medium mb-2">FOLLOW US ON</h4>
+                        <div class="d-flex gap-3 justify-content-center md:justify-content-start">
+                            <a href="https://facebook.com" class="fg-2 text-decoration-none fs-5" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg xmlns="http://w3.org" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com" class="fg-2 text-decoration-none fs-5" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg xmlns="http://w3.org" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                </svg>
+                            </a>
+                            <a href="https://youtube.com" class="fg-2 text-decoration-none fs-5" aria-label="YouTube" target="_blank" rel="noopener">
+                                <svg xmlns="http://w3.org" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <span class="fg-2 small mt-auto">&copy; 2026 Malaya by the Byte of 87.</span>
+                    </div>
+                </div>
 
-        <div class="footer-column">
+                <!--Column 2: ABOUT Section + Links-->
+                <div class="md:col-4 d-flex flex-column align-items-center">
+                    <div class="text-center md:text-start">
+                        <h4 class="fw-medium mb-3">ABOUT</h4>
+                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                            <li><a href="index.html#about" class="fg-2 text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="fg-2 text-decoration-none">Return & Exchange</a></li>
+                            <li><a href="#" class="fg-2 text-decoration-none">Shipping Policy</a></li>
+                            <li><a href="#" class="fg-2 text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="#" class="fg-2 text-decoration-none">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h4>ABOUT</h4>
-
-            <!-- EDIT HERE:
-                 Replace # with the actual page URLs.
-            -->
-
-            <a href="#">About Us</a>
-            <a href="#">Return &amp; Exchange</a>
-            <a href="#">Shipping Policy</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-
+                <!--Column 3: HELP Section + Links-->
+                <div class="md:col-4 d-flex flex-column align-items-center">
+                    <div class="text-center md:text-start">
+                        <h4 class="fw-medium mb-3">HELP</h4>
+                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                            <li><a href="contact.html" class="fg-2 text-decoration-none">Contact Us</a></li>
+                            <li><a href="#" class="fg-2 text-decoration-none">FAQs</a></li>
+                            <li><a href="#" class="fg-2 text-decoration-none">Track Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </footer>
 
-
-        <!-- HELP -->
-
-        <div class="footer-column">
-
-            <h4>HELP</h4>
-
-            <!-- EDIT HERE:
-                 Replace # with the actual page URLs.
-            -->
-
-            <a href="#">Contact Us</a>
-            <a href="#">FAQs</a>
-            <a href="#">Track Order</a>
-
-        </div>
-
-    </div>
-
-
-    <!-- COPYRIGHT -->
-
-    <p class="copyright">
-
-        <!-- EDIT HERE: Update the year or brand attribution if needed. -->
-
-        © 2026 Malaya by the Byte of 87.
-
-    </p>
-
-</footer>
-
-
+    <!--Connects the Bootstrap 6 JavaScript via CDN-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>
