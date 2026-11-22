@@ -1,8 +1,8 @@
-const TO_ADDRESS = "hello@examplewebsite142.com";
+const CONTACT_ADDRESS = "hello@examplewebsite142.com";
 
 function buildMailto(subject, body) {
     const mailtoUrl =
-        `mailto:${TO_ADDRESS}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        `mailto:${CONTACT_ADDRESS}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoUrl;
 }
