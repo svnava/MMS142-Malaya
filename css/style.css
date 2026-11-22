@@ -128,24 +128,26 @@ textarea:focus-visible {
 ================================= */
 
 .navbar {
+    --bs-navbar-bg: var(--primary);
+    --bs-navbar-color: var(--primary-dark);
+    --bs-navbar-hover-color: var(--white);
+    --bs-navbar-active-color: var(--primary-dark);
+    background-color: var(--primary) !important;
     color: var(--primary-dark);
-    background: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
-/* NAVIGATION LINKS */
-
-nav {
+.navbar .navbar-nav {
+    --bs-nav-gap: 1.25rem;
+    --bs-nav-link-color: var(--primary-dark);
+    --bs-nav-link-hover-color: var(--white);
+    --bs-nav-link-hover-bg: var(--primary-dark);
     display: flex;
     align-items: center;
     gap: 1.25rem;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--primary-dark);
+.navbar .nav-link {
+    color: var(--primary-dark) !important;
     font-size: 24px;
     font-weight: 500;
     padding: 8px 12px;
@@ -153,39 +155,11 @@ nav a {
     transition: 0.2s ease;
 }
 
-nav a:hover {
-    text-decoration: none;
-    background: var(--primary-dark);
-    color: var(--white);
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    background-color: var(--primary-dark) !important;
+    color: var(--white) !important;
     font-weight: 700;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-
-/* CUSTOMER TOOLS */
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-icons a {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--secondary);
-    text-decoration: none;
-    font-size: 23px;
-    transition: 0.2s ease;
-}
-
-.nav-icons a:hover {
-    background: var(--secondary);
-    color: var(--white);
 }
 
 /* =================================
@@ -234,22 +208,6 @@ main {
     text-decoration: underline;
 }
 
-/* LAST UPDATED */
-
-.updated {
-    text-align: center;
-    color: var(--primary);
-    font-size: 14px;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 35px;
-}
-
-.updated b {
-    font-weight: 700;
-    font-style: normal;
-}
-
 /* =================================
    PRODUCT CARDS
 ================================= */
@@ -258,6 +216,25 @@ main {
     width: 20px;
     height: 20px;
     border: 3px solid var(--secondary);
+}
+
+.swatch-btn {
+    width: 30px;
+    height: 30px;
+    min-height: 0;
+    border-radius: 50%;
+    padding: 0;
+    border: 2px solid rgba(24, 24, 24, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swatch-btn:hover {
+    transform: scale(1.1);
+}
+
+.swatch-btn.active {
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--secondary);
 }
 
 #card-title {
@@ -273,8 +250,95 @@ main {
     color: var(--primary-dark);
 }
 
+.product-title {
+    color: var(--secondary);
+}
+
+.product-section-title {
+    color: var(--primary-dark);
+}
+
+.product-price {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.thumb-card {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.thumb-card:hover,
+.thumb-card.active {
+    opacity: 1;
+}
+
+.breadcrumb-item a {
+    color: var(--secondary);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--secondary-dark);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--secondary);
+}
+
+#sizeSelect,
+#qtySelect {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 4px 12px;
+}
+
+#sizeSelect:focus,
+#qtySelect:focus {
+    border-color: var(--primary-dark);
+    outline: 2px solid var(--primary-dark);
+}
+
+.btn-order {
+    --bs-btn-bg: var(--primary-dark);
+    --bs-btn-color: var(--white);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--secondary);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-border-color: var(--secondary);
+    --bs-btn-active-bg: var(--secondary-dark);
+    --bs-btn-active-color: var(--white);
+    border-width: 3px;
+    border-radius: 50px;
+    transition: 0.2s ease;
+}
+
+.btn-size-chart {
+    --bs-btn-bg: var(--secondary);
+    --bs-btn-color: var(--white);
+    --bs-btn-border-color: var(--secondary);
+    --bs-btn-hover-bg: var(--secondary-dark);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-border-color: var(--secondary-dark);
+    --bs-btn-active-bg: var(--secondary-dark);
+    --bs-btn-active-color: var(--white);
+    border-width: 2px;
+    border-radius: 50px;
+    transition: 0.2s ease;
+}
+
+/* Style the options inside the opened dropdown list */
+#sizeSelect option,
+#qtySelect option {
+    color: var(--black);
+    background-color: var(--white);
+}
+
 /* =================================
-   ABOUT US
+   ABOUT US SECTION
 ================================= */
 
 #about h2 {
@@ -287,58 +351,25 @@ main {
 }
 
 /* =================================
-   INTRODUCTION
+   PRIVACY POLICY SECTION
 ================================= */
 
-.introduction {
-    max-width: 1000px;
-    margin: 0 auto 40px;
+.policy-container {
+    max-width: 800px;
 }
 
-/* =================================
-   POLICY CONTENT BOXES
-================================= */
-
-.policy-content {
-    background: var(--cream);
-    color: var(--black);
-    font-family: 'Solway', serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.8;
-    padding: 20px;
-    min-height: 120px;
-    width: 100%;
-    border: 2px solid #E5DCCF;
-    border-radius: 5px;
-    overflow-wrap: break-word;
+.policy-container h2,
+.policy-container h3 {
+    color: var(--primary-dark);
 }
 
-/* =================================
-   PRIVACY POLICY GRID
-================================= */
-
-.policy-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 35px 40px;
-}
-
-.policy-section {
-    width: 100%;
-}
-
-.policy-section h2 {
-    text-align: center;
+.policy-container a {
     color: var(--secondary);
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 15px;
+    text-decoration: none;
 }
 
-.full-width {
-    grid-column: 1 / -1;
+.policy-container a:hover {
+    text-decoration: underline;
 }
 
 /* =================================
