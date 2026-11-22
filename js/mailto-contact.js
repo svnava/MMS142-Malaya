@@ -1,4 +1,4 @@
-const TO_ADDRESS = "YOUR_CONTACT_EMAIL_HERE";
+const TO_ADDRESS = "hello@examplewebsite142.com";
 
 function buildMailto(subject, body) {
     const mailtoUrl =

@@ -208,6 +208,15 @@ main {
     text-decoration: underline;
 }
 
+.contact-introduction h2 {
+    color: var(--primary-dark)
+}
+
+.careers-section {
+    background-color: var(--white);
+    padding: 40px 20px;
+}
+
 /* =================================
    PRODUCT CARDS
 ================================= */
@@ -330,7 +339,6 @@ main {
     transition: 0.2s ease;
 }
 
-/* Style the options inside the opened dropdown list */
 #sizeSelect option,
 #qtySelect option {
     color: var(--black);
@@ -348,6 +356,37 @@ main {
 
 #about a {
     color: var(--secondary)
+}
+
+/* =================================
+   CONTACT US SECTION
+================================= */
+
+.contact-form label {
+    color: var(--secondary);
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: var(--white);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--secondary);
+    opacity: 0.5;
+}
+
+.contact-form .btn-primary {
+    background-color: var(--secondary);
+    color: var(--white);
+    border: var(--secondary);
+}
+
+.contact-form .btn-primary:hover {
+    background-color: var(--secondary-dark);
 }
 
 /* =================================
@@ -385,8 +424,6 @@ main {
     color: var(--black);
 }
 
-/* Text Field */
-
 #newsEmail {
     color: var(--secondary);
     border: 2px solid var(--secondary);
@@ -396,8 +433,6 @@ main {
     color: var(--secondary);
     opacity: 0.8;
 }
-
-/* SUBSCRIBE Button */
 
 #newsletter .btn {
     background-color: var(--secondary);
@@ -411,7 +446,7 @@ main {
 }
 
 /* =================================
-   FOOTER
+   FOOTER SECTION
 ================================= */
 
 footer {
@@ -419,8 +454,6 @@ footer {
     color: var(--cream);
     padding: 35px 8% 35px;
 }
-
-/* Footer Social Media Icons + Links */
 
 footer a,
 footer .fg-2 {
